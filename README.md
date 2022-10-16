@@ -207,7 +207,7 @@ Vary：變化v. 去y + i + able = 可變動的adj.
 名稱：賦值  
 運算方向：由右至左   
 比如：  
-```python=
+```python
 a=2
 #a is now 2
 a=a+2
@@ -226,7 +226,7 @@ list2 = [0, 3, 5]
 陣列就是一串資料，每個資料都有一個自己的索引值(`index`)  
 陣列中每個元素都是一個變數，意思是可以儲存各種不同型態的物件  
 比如：  
-```python=
+```python
 from typing import List, Union 
 #此模組是為了方便說明陣列中儲存的資料型態
 #非必要
@@ -244,7 +244,7 @@ list1:List[Union[str,int,float]] = [1,'abc',3.7]
 `object().func()`  
 就是一個`class`中自帶的功能  
 
-```python=
+```python
 list1 = [3,2,1,3,4,2,7,1,10]
 
 #=====插入元素=====
@@ -304,7 +304,7 @@ tuple1 = ('e', 2.7182818, '黃金比例', 1.618)
 `print(object)`
 功能：在終端機上輸出文字  
 比如：  
-```python=
+```python
 print('Hello world')
 print(1+1)
 print('1'+'1')
@@ -331,7 +331,7 @@ print('1','2')
 輸入`input()`  
 語法：`input(str)`  
 比如：  
-```python=
+```python
 a=input('輸入身高(公分)\n')
 a=float(a)/100#轉換為數值型態才能與數字做運算
 print('你的身高為'+str(a)+'公尺')
@@ -345,7 +345,7 @@ print('你的身高為'+str(a)+'公尺')
 
 條件句`if,elif,else`  
 語法：  
-```python=
+```python
 condition1 = (1==1)and(2<=3)
 condition2 = #...
 if condition1:bool:
@@ -364,7 +364,7 @@ else:
 5. `elif`可以有無窮多個
  
 比如：   
-```python=  
+```python
 a = 50
 b = 30
 if a+b <= 100:
@@ -401,7 +401,7 @@ print(a,b)
 範例輸出：2
 
 參考解答：  
-```python=  
+```python
 a=0
 b=0
 data = input()
@@ -429,7 +429,7 @@ print(a+b)
 (BMI=$\dfrac{w}{h^2}$)  
  
 參考解答：  
-```python= 
+```python
 h = input()
 w = input()
 h = float(h)
@@ -458,7 +458,7 @@ print(round(bmi,2))
 
 `for`迴圈  
 語法：  
-```python=
+```python
 for var in iterable_object:
     #...
 ```
@@ -475,7 +475,7 @@ https://vivi.emmphysics.com/%E6%90%9E%E6%B8%85%E6%A5%9Apython%E4%B8%AD%E7%9A%84i
 
 
 常與`for`迴圈使用的函數  
-```python=  
+```python
 range(start:int,stop:int,step:int)  
 #start and step is optional(選填參數)
 #start has a default value of 0(預設值為0)
@@ -485,7 +485,7 @@ range(start:int,stop:int,step:int)
 enumerate(sequence:iter[,start:int = 0])
 ```
 `enumerate()`功能說明  
-```python=
+```python
 list1 = ['a','b','c']
 print(list(enumerate(list1)))
 ```
@@ -496,7 +496,7 @@ print(list(enumerate(list1)))
 計算  
 $\displaystyle\sum_{k=1}^{30}(2k-1)=?$
 
-```python=
+```python
 sum = 0
 for i in range(30):
     sum += 2*(i+1)-1
@@ -513,7 +513,7 @@ for i in range(30):
 
 > 小技巧：在不知道程式哪邊出問題時可以`print()`各種參數或是字串       
 > 例如：想要輸出`foo(1)`為3卻沒有反應    
-> ```python=
+> ```python
 > def foo(x):
 >     if x>1:
 >         return 2
@@ -524,7 +524,7 @@ for i in range(30):
 > 將不會輸出任何東西  
 > 因此在各個if-elif判斷式中加上`print(...)`確認是跑進哪個條件式中  
 > 在最外面也加上`print(...)`以確認有執行`foo()`函式  
-> ```python=
+> ```python
 > def foo(x):
 >     print('a')
 >     if x>1:
