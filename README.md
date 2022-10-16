@@ -1,4 +1,4 @@
-{%hackmd @RintarouTW/DarkTheme %}
+
 # Python & Discord Bot
 
 環境安裝：
