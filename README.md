@@ -219,7 +219,7 @@ a=a+2
 ### 陣列`list`
 什麼是陣列？  
 舉例：  
-```python=
+```python
 list1 = ['水果','香蕉']
 list2 = [0, 3, 5]
 ```
@@ -413,7 +413,7 @@ print(a+b)
 > 字串型態有一個功能叫做`.split(str)`    
 > 其功能為：在字串中尋找括弧內的字元，以之為中心將字串分解成兩個部分  
 > 例如  
-> ```python=
+> ```python
 > string = '1986-06-04'
 > string = string.split('-')
 > print(string)
