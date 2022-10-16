@@ -90,18 +90,18 @@ https://www.thomas-krenn.com/en/wiki/Cmd_commands_under_Windows
 Vary：變化v. 去y + i + able = 可變動的adj.
 
 變數即為某部分記憶體儲存的資料
-
-變數取名法：
-通常用有意義的字
-比如：
-`numbers`、`words`
-如果需要多個英文字
-`input_choices`、`inputNumbers`
-注意不可以與`python`內建的關鍵字衝突
-常見關鍵字：
-`if`、`elif`、`else`、`for`、`while`、`try`、`except`
-`break`、`continue`、`in`、`True`、`False`、`def`、`None`
-`global`、`return`
+ 
+變數取名法：  
+通常用有意義的字  
+比如：  
+`numbers`、`words`  
+如果需要多個英文字  
+`input_choices`、`inputNumbers`  
+注意不可以與`python`內建的關鍵字衝突  
+常見關鍵字：  
+`if`、`elif`、`else`、`for`、`while`、`try`、`except`  
+`break`、`continue`、`in`、`True`、`False`、`def`、`None`  
+`global`、`return`  
 
 
 
