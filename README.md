@@ -542,4 +542,118 @@ for i in range(30):
 ### 物件Object
 
 
+物件的概念：  
+生活中每個東西都有自己的功能與屬性(通常為外觀)  
+以下拿手機作為舉例  
+比如手機可以打電話、玩遊戲、看影片、聽音樂。這樣的「功能」可以對應到程式設計中「物件方法(method)」的概念。  
+而手機可以自己設定桌面背景、選擇手機顏色、要不要加上手機殼或是配件。這樣能夠做更改的變數對應到程式設計中「物件屬性(attribute)」的概念。  
+
+在`python`中，物件的宣告通常是使用`class`關鍵字
+
+中文名稱為「類」
+
+範例：
+
+```python=
+class Smartphone:
+    def __init__(self, shell = None, color = 'white', desktop_image = 'image.png'):
+        #物件的初始化函數
+        #(init stands for initialize)
+        #當物件產生時會被執行
+        #通常是設定參數
+        self.shell = shell
+        self.color = color
+        self.desktop_image = desktop_image
+        self.user_name = 'Steve'
+        self.number = '09123456781'
+        self.internet_connected = True
+    
+    def call_someone(self, contactant):
+        #宣告物件方法(也是一種函數，只是只能透過這個物件存取)
+        #self是用以存取本身資料的一個參數
+        #透過self能夠存取到目前當下物件的各種狀態
+        call(contactant.number)
+        
+    def play_game(self, game):
+        game_open(game)
+        game.run()
+    
+    #...
+    
+#產生物件
+phone1 = Smartphone(shell = '犀牛盾', color = 'black', desktop_image = 'default.png')        
+
+#使用物件方法
+phone1.call_someone(contactant = 'Alex')
+
+#改變物件屬性
+phone1.user_name = 'John'
+phone1.desktop_image = 'Rickroll.png'
+```
+使用物件的話就可以大量生產製造重複的東西，但又保有能夠客製化的選項。
+
+因為產生物件時只能使用其對外公開的參數與功能，物件的內部函數是如何寫的也能保有隱蔽性，不易被抄襲。
+
+`class`對程式的速度影響非常小，且能夠增加程式可讀性，也因此在寫大型`project`時通常都會使用大量的物件，也就發展出了所謂的「物件導向」程式，例如`Java, JavaScript`。
+
+#### 子類subclasses
+有些物件具有大量的屬性，這時候就可以使用子類來將「具有相同特性的屬性」分類
+這也能夠大幅提升程式的可讀性。
+
+範例：
+```python=
+class MySqlDataBase:
+    class SqlInfo:
+    #此即子類，設定MySql執行時需要使用的各種參數
+        def __init__(self, host, user, password, database):
+            self.host = host
+            self.user = user
+            self.password = password
+            self.database = database
+    
+    def __init__(self):
+        self.SqlInfo.host = host
+        self.SqlInfo.user = user
+        self.SqlInfo.password = password
+        self.SqlInfo.database = database
+        #雖然現在看起來創建子類並沒什麼意義，但是也許之後會加上其他屬性，因此先保留著
+
+    def connect_to_db(self):
+        db = mysql.connector.connect(
+            host = self.SqlInfo.host,
+            user = self.SqlInfo.user,
+            password = self.SqlInfo.password,
+            database = self.SqlInfo.database
+            )
+        return db 
+
+    def get_db_data(self, sql_cmd:str, values:tuple = ()):
+        db = self.connect_to_db()
+        cursor = db.cursor()
+        cursor.execute(sql_cmd, values)
+        return cursor.fetchall()
+
+    def insert_data(self, sql_cmd:str, values:tuple):
+        db = self.connect_to_db()
+        cursor = db.cursor()
+        cursor.execute(sql_cmd, values)
+        return db.commit()
+
+    def del_data(self, sql_cmd:str, values):
+        db = self.connect_to_db()
+        cursor = db.cursor()
+        cursor.execute(sql_cmd, values)
+        return db.commit()
+    
+    def update_data(self, sql_cmd:str, values:tuple):
+        db = self.connect_to_db()
+        cursor = db.cursor()
+        cursor.execute(sql_cmd, values)
+        return db.commit()
+```
+
+
+
+
+
 
