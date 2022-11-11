@@ -554,7 +554,7 @@ for i in range(30):
 
 範例：
 
-```python=
+```python
 class Smartphone:
     def __init__(self, shell = None, color = 'white', desktop_image = 'image.png'):
         #物件的初始化函數
@@ -601,7 +601,7 @@ phone1.desktop_image = 'Rickroll.png'
 這也能夠大幅提升程式的可讀性。
 
 範例：
-```python=
+```python
 class MySqlDataBase:
     class SqlInfo:
     #此即子類，設定MySql執行時需要使用的各種參數
